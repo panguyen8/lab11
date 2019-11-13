@@ -8,6 +8,8 @@ import android.view.SurfaceView;
 
 import java.util.ArrayList;
 
+import static java.lang.Thread.sleep;
+
 /**
  * AnimationView
  *
@@ -20,6 +22,7 @@ public class AnimationView extends SurfaceView{
     // track the current dimensions of this surface view
     private int width;
     private int height;
+    private boolean startAnimation = false;
 
     //a list of the animations I'm currently displaying
     private ArrayList<Animation> anims = new ArrayList<Animation>();
@@ -75,7 +78,7 @@ public class AnimationView extends SurfaceView{
 
     /** draw the animations */
     @Override
-    public void draw(Canvas canvas) {
+    public void draw(Canvas canvas){
         super.draw(canvas);
         for(Animation anim : anims) {
             anim.draw(canvas);
@@ -90,5 +93,6 @@ public class AnimationView extends SurfaceView{
             anim.progressChange(newProgress);
         }
     }
+
 
 }//class AnimationView
