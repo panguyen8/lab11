@@ -22,7 +22,6 @@ public class AnimationView extends SurfaceView{
     // track the current dimensions of this surface view
     private int width;
     private int height;
-    private boolean startAnimation = false;
 
     //a list of the animations I'm currently displaying
     private ArrayList<Animation> anims = new ArrayList<Animation>();

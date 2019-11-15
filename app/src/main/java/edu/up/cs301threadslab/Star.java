@@ -35,6 +35,7 @@ public class Star {
             blackPaint.setColor(Color.BLACK);
         }
         myPaint = starPaint;
+
     }
 
     /**
